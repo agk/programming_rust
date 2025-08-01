@@ -9,18 +9,29 @@ fn main() {
     
     println!("Секретное число равно {}", secret_number);
     
-    println!("Пожайлуста, введите свою догадку.");
-    
-    let mut guess = String::new();
-    
-    io::stdin().read_line(&mut guess)
-        .expect("Не получилось прочитать строку");
+    loop {
 
-    println!("Вы загадали: {}", guess);
+        println!("Пожайлуста, введите свою догадку.");
+        
+        let mut guess = String::new();
+        
+        io::stdin().read_line(&mut guess)
+            .expect("Не получилось прочитать строку");
 
-    match guess.cmp(&secret_number) {
-        Ordering::Less => println!("Слишком малое число!"),
-        Ordering::Greater => println!("Слишком большое число!"),
-        Ordering::Equal => println!("Вы выиграли!"),
+        let guess: u32 = match guess.trim().parse() {
+            Ok(num) => num,
+            Err(_) => continue,
+        };
+
+        println!("Вы загадали: {}", guess);
+
+        match guess.cmp(&secret_number) {
+            Ordering::Less => println!("Слишком малое число!"),
+            Ordering::Greater => println!("Слишком большое число!"),
+            Ordering::Equal => {
+                println!("Вы выиграли!");
+                break;
+            },
+        }
     }
 }
