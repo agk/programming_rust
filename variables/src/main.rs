@@ -11,9 +11,12 @@ fn main() {
     let spaces = spaces.len();
     println!("Значение spaces равно {}", spaces);
     
+    // Типы данных
+    
     let x = 2.0; // f64
     let y: f32 = 3.0; // f32
-
+    
+    // числовые операции
     // сложение
     let sum = 5 + 10;
 
@@ -28,5 +31,5 @@ fn main() {
 
     // остаток
     let remainder = 43 % 5;
-     
+
 }
