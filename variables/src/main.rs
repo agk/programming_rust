@@ -35,4 +35,11 @@ fn main() {
     // булев тип
     let t = true;
     let f: bool = false; // с явной аннотацией
+
+    // символьный тип
+    let c = 'z';
+    let z = '@';
+    let heart_eyed_cat = '';
+
+    
 }
