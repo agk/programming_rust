@@ -32,5 +32,7 @@ fn main() {
     // остаток
     let remainder = 43 % 5;
 
-    
+    // булев тип
+    let t = true;
+    let f: bool = false; // с явной аннотацией
 }
