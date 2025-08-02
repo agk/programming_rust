@@ -1,0 +1,6 @@
+[package]
+name = "hw_3gl_calculator_temperature_f_c"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
