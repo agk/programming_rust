@@ -3,7 +3,7 @@ fn main() {
     let number = if condition {
         5
     } else {
-        6
+        "шесть"
     };
     println!("значение  числа равно {}", number);
 
