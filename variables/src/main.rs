@@ -1,9 +1,6 @@
 fn main() {
-    // let a: [i32; 5] = [1, 2, 3, 4, 5];
-
-    // let month = ["январь","февраль"];
-
-    let a = [3; 5];
-
+    let a = [1, 2, 3, 4, 5];
+    let fist = a[0];
+    let second = a[1];
 
 }
