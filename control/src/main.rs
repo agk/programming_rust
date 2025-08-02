@@ -1,11 +1,8 @@
 fn main() {
     let number = 3;
 
-    if number < 5 {
-        println!("условие было истинным");
+    if number != 0 {
+        println!("число было отличным от нуля");
     }
-    else {
-        println!("условие было ложным");
-    }
-
+    
 }
