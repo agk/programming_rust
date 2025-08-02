@@ -7,4 +7,6 @@ fn main() {
             break counter * 2;
         }
     };
+    println!("Результат равен {}", result);
+    
 }
