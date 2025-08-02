@@ -1,10 +1,8 @@
+fn five() -> i32 {
+    5
+}
 fn main() {
-    let x = 5;
+    let x = five();
 
-    let y = {
-        let x = 3;
-        x + 1
-    };
-
-    println!("Значение y равно {}", y);
+    println!("Значение x равно {}", x);
 }
