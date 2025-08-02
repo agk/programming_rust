@@ -32,4 +32,5 @@ fn main() {
     // остаток
     let remainder = 43 % 5;
 
+    
 }
