@@ -15,6 +15,13 @@ fn main() {
 
     user1.email = String::from("antheremail@example.com");
 
+    let user2 = User {
+        email: String::from("another@example.com"),
+        username: String::from("anotherusername567"),
+        active: user1.active,
+        sign_in_count: user1.sign_in_count,
+    }
+
 }
 
 fn build_user(email: String, username: String) -> User {
