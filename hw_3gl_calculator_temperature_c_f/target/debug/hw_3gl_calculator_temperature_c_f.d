@@ -1,1 +1,0 @@
-/Users/agk/code_src/src/github.com/programming_rust/hw_3gl_calculator_temperature_c_f/target/debug/hw_3gl_calculator_temperature_c_f: /Users/agk/code_src/src/github.com/programming_rust/hw_3gl_calculator_temperature_c_f/src/main.rs
