@@ -6,6 +6,8 @@ struct Rectangle {
 fn main() {
     let rect1 = Rectangle { width: 30, height: 50 };
 
+    println!("rect1 равен {}", rect1);
+    
     println!(
         "Площадь прямоугольника равна {} квадратным пискселам.",
         area(&rect1)
