@@ -7,15 +7,26 @@ impl Rectangle {
     fn area(&self) -> u32 {
         self.width * self.height
     }
+
+    fn can_hold(&self, other: &Rectangle) -> bool {
+        self.width > other.width && self.height < other.height
+    }
 }
 
 fn main() {
     let rect1 = Rectangle { width: 30, height: 50 };
+    let rect2 = Rectangle { width: 10, height: 40 };
+    let rect3 = Rectangle { width: 60, height: 45 };
 
     println!(
         "Площадь прямоугольника равна {} квадратным пискселам.",
         rect1.area()
     );
+
+
+    println!("Может ли rect1 содержать в себе rect2? {}", rect1.can_hold(&rect2));
+    println!("Может ли rect1 содержать в себе rect3? {}", rect1.can_hold(&rect3))
+
 
 
 }
