@@ -1,15 +1,14 @@
 fn main() {
-    let width1 = 30;
-    let height1 = 50;
+    let rect1 = (30, 50);
 
     println!(
         "Площадь прямоугольника равна {} квадратным пискселам.",
-        area(width1, height1)
+        area(rect1)
     );
 
 
 }
 
-fn area(width: u32, height: u32) -> u32 {
-    width * height
+fn area(demensions: (u32, u32)) -> u32 {
+    demensions.0 * demensions.1
 }
