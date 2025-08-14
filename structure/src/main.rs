@@ -1,6 +1,6 @@
 struct User {
-    username: &str,
-    email: &str,
+    username: String,
+    email: String,
     sign_in_count: u64,
     active: bool,
 }
@@ -8,8 +8,8 @@ struct User {
 fn main() {
 
     let user1 = User {
-        email: "primer@example.com",
-        username: "primerusername123",
+        email: String:from("primer@example.com"),
+        username: String.from("primerusername123"),
         active: true,
         sign_in_count: 1,
     }
