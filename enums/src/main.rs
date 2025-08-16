@@ -1,6 +1,8 @@
-enum IpAddrKind {
-    V4(u8, u8, u8, u8),
-    V6(String),
+enum Message {
+    Qiut,
+    Move { x : 132, y: 132 },
+    Write(String),
+    ChangeColor(i32, i32, i32),
 }
 
 struct IpAddr {
