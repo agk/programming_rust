@@ -1,27 +1,26 @@
 enum Message {
     Qiut,
-    Move { x : 132, y: 132 },
+    Move { x : i32, y: i32 },
     Write(String),
     ChangeColor(i32, i32, i32),
 }
+struct QuitMesssage; // пустая структура
+struct MoveMessage {
+    x: i32,
+    y: i32,
+}
+struct WriteMessage(String); // кортежная структура
+struct ChangeColorMessage(i32, i32, i32); //кортежная структура
 
-struct IpAddr {
-    kind: IpAddrKind,
-    address: String,
+impl Message {
+    fn call(&self) {
+        // здесь будет определено тело метода
+    }
 }
 
-let home = IpAddr::V4(127.0.0.1);
-let loopback = IpAddr::V6(String::from("::1"));
+let m = Message::Write(String::from("hello"));
+m.call();
+
 
 fn main() {
-    let four = IpAddrKind::V4;
-    let six = IpAddrKind::V6;
-
-    route(IpAddrKind::V4);
-    route(IpAddrKind::V6);
-    
-}
-
-fn route(ip_kind: IpAddrKind) {
-
 }
