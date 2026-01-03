@@ -21,6 +21,6 @@ impl Message {
 let m = Message::Write(String::from("hello"));
 m.call();
 
-
 fn main() {
+
 }
