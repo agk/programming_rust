@@ -56,7 +56,7 @@ fn main() {
     // С помощью кортежа можно возвращать несколько значений
     let str_n1 = String::from("hello");
     let (str_n2, len) = calculate_length(str_n1);
-    println!("Длина '{}' равна {}.", sttr_n2, len);
+    println!("Длина '{}' равна {}.", str_n2, len);
     
 
 
