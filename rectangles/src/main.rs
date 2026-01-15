@@ -3,6 +3,7 @@ struct Rectangle {
     width: u32,
     height: u32,
 }
+
 impl Rectangle {
     fn area(&self) -> u32 {
         self.width * self.height
@@ -19,7 +20,7 @@ fn main() {
     let rect3 = Rectangle { width: 60, height: 45 };
 
     println!(
-        "Площадь прямоугольника равна {} квадратным пискселам.",
+        "Площадь прямоугольника равна {} квадратным пикселам.",
         rect1.area()
     );
 
