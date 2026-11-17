@@ -1,20 +1,15 @@
 use std::io;
 use std::cmp::Ordering;
-use rand::Rng;
+use rand::RngExt;
 
 fn main() {
     println!("Угадай число!");
-
-    let secret_number = rand::thread_rng().gen_range(1, 101);
-    
+    let secret_number = rand::rng().random_range(1..101);
     println!("Секретное число равно {}", secret_number);
     
     loop {
-
         println!("Пожайлуста, введите свою догадку.");
-        
         let mut guess = String::new();
-        
         io::stdin().read_line(&mut guess)
             .expect("Не получилось прочитать строку");
 
@@ -24,7 +19,6 @@ fn main() {
         };
 
         println!("Вы загадали: {}", guess);
-
         match guess.cmp(&secret_number) {
             Ordering::Less => println!("Слишком малое число!"),
             Ordering::Greater => println!("Слишком большое число!"),
