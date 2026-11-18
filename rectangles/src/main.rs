@@ -12,6 +12,10 @@ impl Rectangle {
     fn can_hold(&self, other: &Rectangle) -> bool {
         self.width > other.width && self.height < other.height
     }
+
+    fn width(&self) -> bool {
+        self.width > 0
+    }
 }
 
 fn main() {
@@ -23,7 +27,10 @@ fn main() {
         "Площадь прямоугольника равна {} квадратным пикселам.",
         rect1.area()
     );
-
+    
+    if rect1.width() {
+        println!("The rectangle has a nonzero width; it is {}", rect1.width);
+    }
 
     println!("Может ли rect1 содержать в себе rect2? {}", rect1.can_hold(&rect2));
     println!("Может ли rect1 содержать в себе rect3? {}", rect1.can_hold(&rect3))
