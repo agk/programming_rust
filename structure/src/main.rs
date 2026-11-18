@@ -5,8 +5,12 @@ struct User {
     active: bool,
 }
 
+// Кортежные структуры: структуры без именованных полей для создания разных типов
 struct Color(i32, i32, i32);
 struct Point(i32, i32, i32);
+
+// Единично-подобные структуры: структуры без полей
+struct AlwaysEqual;
 
 fn main() {
 
@@ -19,11 +23,16 @@ fn main() {
 
     user1.email = String::from("anotheremail@example.com");
 
-    let mut _user2 = build_user(String::from("anotheremail@example.com"), String::from("agk"));
+    let mut _user2 = build_user(
+        String::from("anotheremail@example.com"), 
+        String::from("agk")
+    );
 
     // Использование кортежных структур без именованных полей для создания разных типов
     let _black = Color(0, 0, 0);
     let _origin = Point(0, 0, 0);
+
+    let subject = AlwaysEqual;
 
 }
 
